@@ -8,7 +8,10 @@
 
 #import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate,UITextFieldDelegate>
+
+@property (nonatomic, retain) UITextField* usernameTextField;
+@property (nonatomic, retain) UITextField* passwordTextField;
 
 - (IBAction)showInfo:(id)sender;
 

@@ -17,6 +17,8 @@
 		EED17911153A3FFB00CD333E /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED17910153A3FFB00CD333E /* FlipsideViewController.m */; };
 		EED17914153A3FFB00CD333E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED17912153A3FFB00CD333E /* MainViewController.xib */; };
 		EED17917153A3FFB00CD333E /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED17915153A3FFB00CD333E /* FlipsideViewController.xib */; };
+		EED17921153A46A100CD333E /* LayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EED17920153A46A100CD333E /* LayoutHelper.m */; };
+		EED17923153A477400CD333E /* Background_Login.png in Resources */ = {isa = PBXBuildFile; fileRef = EED17922153A477400CD333E /* Background_Login.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,18 +26,21 @@
 		EED178FA153A3FFB00CD333E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EED178FC153A3FFB00CD333E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EED178FE153A3FFB00CD333E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EED17902153A3FFB00CD333E /* login-Info.plist */ = {isa = PBXFileReference; path = "login-Info.plist"; sourceTree = "<group>"; };
+		EED17902153A3FFB00CD333E /* login-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "login-Info.plist"; sourceTree = "<group>"; };
 		EED17904153A3FFB00CD333E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EED17906153A3FFB00CD333E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EED17908153A3FFB00CD333E /* login-Prefix.pch */ = {isa = PBXFileReference; path = "login-Prefix.pch"; sourceTree = "<group>"; };
-		EED17909153A3FFB00CD333E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		EED17908153A3FFB00CD333E /* login-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "login-Prefix.pch"; sourceTree = "<group>"; };
+		EED17909153A3FFB00CD333E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EED1790A153A3FFB00CD333E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EED1790C153A3FFB00CD333E /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		EED1790C153A3FFB00CD333E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EED1790D153A3FFB00CD333E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		EED1790F153A3FFB00CD333E /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		EED1790F153A3FFB00CD333E /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		EED17910153A3FFB00CD333E /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		EED17913153A3FFB00CD333E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		EED17916153A3FFB00CD333E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+		EED1791F153A46A100CD333E /* LayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutHelper.h; sourceTree = "<group>"; };
+		EED17920153A46A100CD333E /* LayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutHelper.m; sourceTree = "<group>"; };
+		EED17922153A477400CD333E /* Background_Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background_Login.png; path = ../Background_Login.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +89,10 @@
 			children = (
 				EED17909153A3FFB00CD333E /* AppDelegate.h */,
 				EED1790A153A3FFB00CD333E /* AppDelegate.m */,
-				EED1790C153A3FFB00CD333E /* MainViewController.h */,
-				EED1790D153A3FFB00CD333E /* MainViewController.m */,
-				EED1790F153A3FFB00CD333E /* FlipsideViewController.h */,
-				EED17910153A3FFB00CD333E /* FlipsideViewController.m */,
-				EED17912153A3FFB00CD333E /* MainViewController.xib */,
-				EED17915153A3FFB00CD333E /* FlipsideViewController.xib */,
+				EED17927153A4E4A00CD333E /* ViewControllers */,
+				EED17928153A4E5200CD333E /* Models */,
 				EED17901153A3FFB00CD333E /* Supporting Files */,
+				EED17924153A4DEB00CD333E /* UserInterface */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -104,6 +106,52 @@
 				EED17908153A3FFB00CD333E /* login-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EED17924153A4DEB00CD333E /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EED1790F153A3FFB00CD333E /* FlipsideViewController.h */,
+				EED1791F153A46A100CD333E /* LayoutHelper.h */,
+				EED1790C153A3FFB00CD333E /* MainViewController.h */,
+				EED17910153A3FFB00CD333E /* FlipsideViewController.m */,
+				EED17920153A46A100CD333E /* LayoutHelper.m */,
+				EED1790D153A3FFB00CD333E /* MainViewController.m */,
+				EED17926153A4E2500CD333E /* Images */,
+				EED17925153A4E0100CD333E /* xibs */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		EED17925153A4E0100CD333E /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				EED17915153A3FFB00CD333E /* FlipsideViewController.xib */,
+				EED17912153A3FFB00CD333E /* MainViewController.xib */,
+			);
+			name = xibs;
+			sourceTree = "<group>";
+		};
+		EED17926153A4E2500CD333E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EED17922153A477400CD333E /* Background_Login.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		EED17927153A4E4A00CD333E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EED17928153A4E5200CD333E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +208,7 @@
 				EED17905153A3FFB00CD333E /* InfoPlist.strings in Resources */,
 				EED17914153A3FFB00CD333E /* MainViewController.xib in Resources */,
 				EED17917153A3FFB00CD333E /* FlipsideViewController.xib in Resources */,
+				EED17923153A477400CD333E /* Background_Login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +223,7 @@
 				EED1790B153A3FFB00CD333E /* AppDelegate.m in Sources */,
 				EED1790E153A3FFB00CD333E /* MainViewController.m in Sources */,
 				EED17911153A3FFB00CD333E /* FlipsideViewController.m in Sources */,
+				EED17921153A46A100CD333E /* LayoutHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +341,7 @@
 				EED1791C153A3FFB00CD333E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
