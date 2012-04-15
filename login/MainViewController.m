@@ -7,14 +7,20 @@
 //
 
 #import "MainViewController.h"
+
+// views
 #import "LayoutHelper.h"
+
+// requests
+#import "ConnectModuleLoginRequest.h"
 
 @interface MainViewController ()
 
 @end
 
 @interface MainViewController (privateMethods)
-- (void) CustomizeViews;
+- (void) loginWithUsername:(NSString*)in_username andPassword:(NSString*)in_password;
+- (void) customizeViews;
 @end
 
 @implementation MainViewController
@@ -25,13 +31,13 @@
 - (void)loadView
 {
     [super loadView];
-    m_usernameTextField = [[UITextField alloc] initWithFrame:CGRectZero];
-    m_passwordTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+    self.usernameTextField = [[UITextField alloc] initWithFrame:CGRectZero];
+    self.passwordTextField = [[UITextField alloc] initWithFrame:CGRectZero];
     
-    m_usernameTextField.delegate = self;
-    m_passwordTextField.delegate = self;
-    [self.view addSubview:m_usernameTextField];
-    [self.view addSubview:m_passwordTextField];
+    self.usernameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    [self.view addSubview:self.usernameTextField];
+    [self.view addSubview:self.passwordTextField];
 
 }
 
@@ -39,7 +45,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self CustomizeViews];
+    [self customizeViews];
 }
 
 - (void)viewDidUnload
@@ -50,7 +56,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return NO;
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Flipside View
@@ -82,6 +88,10 @@
 	// the user pressed the "Done" button, so dismiss the keyboard
 	[textField resignFirstResponder];
     self.view.frame = [[UIScreen mainScreen] bounds];
+    if (textField == self.passwordTextField)
+    {
+        [self loginWithUsername:self.usernameTextField.text andPassword:self.passwordTextField.text];
+    }
 	return YES;
 }
 
@@ -89,48 +99,53 @@
 
 @implementation MainViewController(privateMethods)
 
-- (void) CustomizeViews
+- (void) loginWithUsername:(NSString*)in_username andPassword:(NSString*)in_password
+{
+    [ConnectModuleLoginRequest loginAs:in_username withPassword:in_password withDelegate:self];
+}
+
+- (void) customizeViews
 {
     self.view.backgroundColor = [[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Background_Login"]] autorelease];
     // set the looks
     
-    m_usernameTextField.borderStyle = UITextBorderStyleRoundedRect;
-    m_passwordTextField.borderStyle = UITextBorderStyleRoundedRect;
+    self.usernameTextField.borderStyle = UITextBorderStyleRoundedRect;
+    self.passwordTextField.borderStyle = UITextBorderStyleRoundedRect;
     
-    m_usernameTextField.placeholder = NSLocalizedString(@"username", @"username");
-    m_passwordTextField.placeholder = NSLocalizedString(@"password", @"password");
+    self.usernameTextField.placeholder = NSLocalizedString(@"username", @"username");
+    self.passwordTextField.placeholder = NSLocalizedString(@"password", @"password");
     
-    m_usernameTextField.returnKeyType = UIReturnKeyDone;
-    m_passwordTextField.returnKeyType = UIReturnKeyDone;
+    self.usernameTextField.returnKeyType = UIReturnKeyDone;
+    self.passwordTextField.returnKeyType = UIReturnKeyDone;
     
-    m_passwordTextField.secureTextEntry = YES;
+    self.passwordTextField.secureTextEntry = YES;
     
-    m_usernameTextField.keyboardType = UIKeyboardTypeDefault;	// use the default type input method (entire keyboard)
-    m_passwordTextField.keyboardType = UIKeyboardTypeDefault;	// use the default type input method (entire keyboard)
+    self.usernameTextField.keyboardType = UIKeyboardTypeDefault;	// use the default type input method (entire keyboard)
+    self.passwordTextField.keyboardType = UIKeyboardTypeDefault;	// use the default type input method (entire keyboard)
     
-    m_usernameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    m_passwordTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.usernameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.passwordTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     // set the size
     CGRect l_bounds = self.view.bounds;
-    [m_passwordTextField sizeToFit];
-    [m_usernameTextField sizeToFit];
-    [LayoutHelper SetBoundsWidthFor:m_usernameTextField withWidth:G_SEPERATE(l_bounds.size.width)];
-    [LayoutHelper SetBoundsWidthFor:m_passwordTextField withWidth:G_SEPERATE(l_bounds.size.width)];    
-    m_usernameTextField.frame = m_usernameTextField.bounds;
-    m_passwordTextField.frame = m_passwordTextField.bounds;
+    [self.passwordTextField sizeToFit];
+    [self.usernameTextField sizeToFit];
+    [LayoutHelper SetBoundsWidthFor:self.usernameTextField withWidth:G_SEPERATE(l_bounds.size.width)];
+    [LayoutHelper SetBoundsWidthFor:self.passwordTextField withWidth:G_SEPERATE(l_bounds.size.width)];    
+    self.usernameTextField.frame = self.usernameTextField.bounds;
+    self.passwordTextField.frame = self.passwordTextField.bounds;
     
     // set position
     
     // passwordTextField just below the golden line
     
-    CGFloat l_yOffset = G_SEPERATE(m_passwordTextField.bounds.size.height);
+    CGFloat l_yOffset = G_SEPERATE(self.passwordTextField.bounds.size.height);
     
-    m_usernameTextField.center = CGPointMake(
+    self.usernameTextField.center = CGPointMake(
                                              l_bounds.size.width/2,
                                              G_SEPERATE(l_bounds.size.height) - l_yOffset
                                              );
     
-    m_passwordTextField.center = CGPointMake(
+    self.passwordTextField.center = CGPointMake(
                                              l_bounds.size.width/2,
                                              G_SEPERATE(l_bounds.size.height) + l_yOffset
                                              );
