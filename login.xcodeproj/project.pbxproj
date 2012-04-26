@@ -75,8 +75,8 @@
 		EE86C1E3153A72A30044AEAD /* ModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelRepository.m; sourceTree = "<group>"; };
 		EE86C1E5153A738C0044AEAD /* LoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInfo.h; sourceTree = "<group>"; };
 		EE86C1E6153A738C0044AEAD /* LoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInfo.m; sourceTree = "<group>"; };
-		EE86C1EA153A7D7F0044AEAD /* ConnectModuleLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectModuleLoginRequest.h; sourceTree = "<group>"; };
-		EE86C1EB153A7D7F0044AEAD /* ConnectModuleLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectModuleLoginRequest.m; sourceTree = "<group>"; };
+		EE86C1EA153A7D7F0044AEAD /* ConnectModuleLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectModuleLoginRequest.h; path = login/ConnectModuleLoginRequest.h; sourceTree = "<group>"; };
+		EE86C1EB153A7D7F0044AEAD /* ConnectModuleLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectModuleLoginRequest.m; path = login/ConnectModuleLoginRequest.m; sourceTree = "<group>"; };
 		EED178F6153A3FFB00CD333E /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED178FA153A3FFB00CD333E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EED178FC153A3FFB00CD333E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,12 +186,12 @@
 		EED178EB153A3FFB00CD333E = {
 			isa = PBXGroup;
 			children = (
+				EED17900153A3FFB00CD333E /* Code */,
+				EED178F9153A3FFB00CD333E /* Frameworks */,
 				EED17926153A4E2500CD333E /* Images */,
 				EE86C1E8153A7CA40044AEAD /* Network */,
-				EED17900153A3FFB00CD333E /* login */,
 				EE86C1E0153A71600044AEAD /* OpenSourceUtil */,
 				EED178F7153A3FFB00CD333E /* Products */,
-				EED178F9153A3FFB00CD333E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,16 +213,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EED17900153A3FFB00CD333E /* login */ = {
+		EED17900153A3FFB00CD333E /* Code */ = {
 			isa = PBXGroup;
 			children = (
 				EED17909153A3FFB00CD333E /* AppDelegate.h */,
 				EED1790A153A3FFB00CD333E /* AppDelegate.m */,
-				EED17927153A4E4A00CD333E /* ViewControllers */,
 				EED17928153A4E5200CD333E /* Models */,
 				EED17901153A3FFB00CD333E /* Supporting Files */,
 				EED17924153A4DEB00CD333E /* UserInterface */,
+				EED17927153A4E4A00CD333E /* ViewControllers */,
 			);
+			name = Code;
 			path = login;
 			sourceTree = "<group>";
 		};
